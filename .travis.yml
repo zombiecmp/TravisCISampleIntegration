@@ -1,2 +1,2 @@
 language: csharp
-solution: "./TravisCISampleIntegration.sln"
+solution: "./TravisCISampleIntegration/TravisCISampleIntegration.sln"

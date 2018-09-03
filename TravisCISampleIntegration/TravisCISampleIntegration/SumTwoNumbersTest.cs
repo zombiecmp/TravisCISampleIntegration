@@ -1,24 +1,24 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace TravisCISampleIntegration
 {
     public class SumTwoNumbersTest
     {
-        [Test]
+        [Fact]
         public void PassingTest()
         {
-            Assert.AreEqual(4, SumTwoNumbers.Add(2, 2));
+            Assert.Equal(4, SumTwoNumbers.Add(2, 2));
         }
 
-        [Test]
+        [Fact]
         public void FailingTest()
         {
-            Assert.AreEqual(5, SumTwoNumbers.Add(2, 2));
+            Assert.Equal(5, SumTwoNumbers.Add(2, 2));
         }
     }
 }

@@ -1,9 +1,5 @@
 language: csharp
 solution: "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
-mono: none
-install:
-  - nuget restore "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
   - mono ./TravisCISampleIntegration/NUnit.Runners.2.6.4/tools/nunit-console.exe ./TravisCISampleIntegration/bin/Release/TravisCISampleIntegration.dll

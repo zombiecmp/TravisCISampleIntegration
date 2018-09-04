@@ -2,4 +2,4 @@ language: csharp
 solution: "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
 script:
   - xbuild /p:Configuration=Release "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
-  - mono ./TravisCISampleIntegration/packages/xunit.runner.console*/tools/net452/xunit.console.exe ./TravisCISampleIntegration/bin/Release/TravisCISampleIntegration.dll
+  - mono ./TravisCISampleIntegration/packages/xunit.runner.console*/tools/net452/xunit.console.exe ./TravisCISampleIntegration/TravisCISampleIntegration/bin/Release/TravisCISampleIntegration.exe

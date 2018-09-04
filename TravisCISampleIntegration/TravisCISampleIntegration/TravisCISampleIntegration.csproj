@@ -62,9 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OtherTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SumTwoNumbers.cs" />
     <Compile Include="SumTwoNumbersTest.cs" />
   </ItemGroup>
   <ItemGroup>

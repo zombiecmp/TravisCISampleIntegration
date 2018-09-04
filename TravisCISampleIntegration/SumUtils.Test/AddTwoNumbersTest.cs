@@ -12,9 +12,9 @@ namespace SumUtils.Test
         }
 
         [Fact]
-        public void FailingTest()
+        public void PassingTest3Plus2()
         {
-            Assert.Equal(5, SumTwoNumbers.Add(2, 2));
+            Assert.Equal(5, SumTwoNumbers.Add(3, 2));
         }
     }
 }

@@ -3,4 +3,4 @@ dist: trusty
 solution: "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
 script:
   - xbuild /p:Configuration=Release "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
-  - mono ./TravisCISampleIntegration/packages/xunit.runner.console*/tools/net452/xunit.console.exe ./TravisCISampleIntegration/TravisCISampleIntegration/SumUtils.Test/bin/Release/SumUtils.Test.dll
+  - mono ./TravisCISampleIntegration/packages/xunit.runner.console*/tools/net452/xunit.console.exe ./TravisCISampleIntegration/SumUtils.Test/bin/Release/SumUtils.Test.dll

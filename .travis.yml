@@ -9,6 +9,9 @@ env:
   global:
     secure: I/T7ln/uFd6UwtJq/SfVbiuTB7S0AQGGqg0xESx+nuXyjP9IY6WIsraW3ZI5VdiZXv8ebv0CwbCPWR4h1MZ+GjTNF7UL9xL5kSMzEHgxZV9+UnkO0tK0cLlbPbZVkdq+JnDVNSwbQwynv7UmFfHieUEI0mIMoPaonyD4UN9To+vYdQ/Dfw1kObnsSw4WydK1T5xqb292AnO79/45eCYDszj9k5vFcYKYwYpreetoycM2Yt4FYGeFIPj3FLRLJYWyd2uutAvwQO05Re5QVetKRR/TvbBtOF4+KhBcZzuRW98x9PvHvIyk1YUnfYbkb+aEwodkOsXHlAagEvC1VBYb4BIw7Q5ibDHRC1MzlU79GvgY9g9Joohou6rnqsx48xsIwWoSlpWNRP9/U61uqhb0ZubELuIlJ8UYaspe5DWqG0Ebw2JYqybWzc/It/vH5xjBFe3y2KYpxj55Zic6eXanKKyQz8i8nWrP5N3o3JuywoA1uECE1Hs/k9vN1+9wJVk7L9BbIgrdVx8sZcOb6GSVwNWLdFy01W5uTXR+rD+1g3OpyHQEM+1WrHpWEHBzH6htj8bHD0CpD0PiMe4TbVRcZOQanbiW7JlvvdKcgDPX28CuCC6F35C/GtGJW5B9zGYMzgL1b1kMTiG36MK+TDoWjFnFyta2DeCgunYf1B5gnmQ=
 deploy:	
-- mono nuget.exe pack ./TravisCISampleIntegration/SumUtils.nuspec
-- mono nuget.exe setApiKey $NUGET_API_KEY -Source https://www.nuget.org -Verbosity quiet
-- mono nuget.exe push ./TravisCISampleIntegration/SumUtils.$MAJOR_VERSION_NUMBER.$MINOR_VERSION_NUMBER.$TRAVIS_BUILD_NUMBER.*.nupkg -Source https://www.nuget.org/api/v2/package	
+  skip_cleanup: true
+  provider: script
+  script:
+  - mono nuget.exe pack ./TravisCISampleIntegration/SumUtils.nuspec
+  - mono nuget.exe setApiKey $NUGET_API_KEY -Source https://www.nuget.org -Verbosity quiet
+  - mono nuget.exe push ./TravisCISampleIntegration/SumUtils.$MAJOR_VERSION_NUMBER.$MINOR_VERSION_NUMBER.$TRAVIS_BUILD_NUMBER.*.nupkg -Source https://www.nuget.org/api/v2/package	

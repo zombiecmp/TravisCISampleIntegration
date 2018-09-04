@@ -5,7 +5,7 @@ script:
   - xbuild /p:Configuration=Release "./TravisCISampleIntegration/TravisCISampleIntegration.sln"
   - mono ./TravisCISampleIntegration/packages/xunit.runner.console*/tools/net452/xunit.console.exe
   ./TravisCISampleIntegration/SumUtils.Test/bin/Release/SumUtils.Test.dll
-deploy:	
+deploy:
   skip_cleanup: true
   provider: script
   script: mono nuget pack ./TravisCISampleIntegration/SumUtils/SumUtils.nuspec -Verbosity detailed

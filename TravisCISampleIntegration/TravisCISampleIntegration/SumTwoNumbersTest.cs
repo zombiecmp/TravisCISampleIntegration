@@ -11,13 +11,13 @@ namespace TravisCISampleIntegration
         //[Fact]
         public void PassingTest()
         {
-            Assert.Equal(4, SumTwoNumbers.Add(2, 2));
+            //Assert.Equal(4, SumTwoNumbers.Add(2, 2));
         }
 
         //[Fact]
         public void FailingTest()
         {
-            Assert.Equal(5, SumTwoNumbers.Add(2, 2));
+            //Assert.Equal(5, SumTwoNumbers.Add(2, 2));
         }
     }
 }
